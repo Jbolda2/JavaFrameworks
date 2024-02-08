@@ -46,9 +46,15 @@ public class AddInhousePartController{
         InhousePartService repo=context.getBean(InhousePartServiceImpl.class);
         InhousePart ip=repo.findById((int)part.getId());
         if(ip!=null)part.setProducts(ip.getProducts());
-            repo.save(part);
 
-        return "confirmationaddpart";}
+            if((part.getInv() < part.getInvMin()) || (part.getInv() > part.getInvMax())) {
+                return "InventoryErrorInhouse";
+            } else {
+                repo.save(part);
+
+                return "confirmationaddpart";
+            }
+            }
     }
 
 }

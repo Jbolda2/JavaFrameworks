@@ -46,14 +46,18 @@ public class BootStrapData implements CommandLineRunner {
         counter.setInv(5);
         counter.setPrice(14.0);
         counter.setId(100L);
+        counter.setInvMin(0);
+        counter.setInvMax(6);
         outsourcedPartRepository.save(counter);
 
         OutsourcedPart sole = new OutsourcedPart();
-        sole.setCompanyName("Gentlemen's Footwear");
+        sole.setCompanyName("Jim's Shoe Parts");
         sole.setName("Sole");
         sole.setInv(5);
         sole.setPrice(15.0);
         sole.setId(101L);
+        sole.setInvMin(0);
+        sole.setInvMax(6);
         outsourcedPartRepository.save(sole);
 
 
@@ -63,6 +67,8 @@ public class BootStrapData implements CommandLineRunner {
         tongue.setInv(5);
         tongue.setPrice(16.0);
         tongue.setId(102L);
+        tongue.setInvMin(0);
+        tongue.setInvMax(6);
         partRepository.save(tongue);
 
         InhousePart laces = new InhousePart();
@@ -71,6 +77,8 @@ public class BootStrapData implements CommandLineRunner {
         laces.setInv(5);
         laces.setPrice(17.0);
         laces.setId(103L);
+        laces.setInvMin(0);
+        laces.setInvMax(6);
         partRepository.save(laces);
 
         OutsourcedPart toecap = new OutsourcedPart();
@@ -79,6 +87,8 @@ public class BootStrapData implements CommandLineRunner {
         toecap.setInv(5);
         toecap.setPrice(18.0);
         toecap.setId(104L);
+        toecap.setInvMin(0);
+        toecap.setInvMax(6);
         outsourcedPartRepository.save(toecap);
     }
 
@@ -102,6 +112,5 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Number of Parts"+partRepository.count());
         System.out.println(partRepository.findAll());
 */
-
     }
 }
