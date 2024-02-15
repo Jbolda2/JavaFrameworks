@@ -136,3 +136,10 @@ J.  Remove the class files for any unused validators in order to clean your code
     No files were edited and no pushes were made at this point, as there were not any unused validators.
 
     A push was made to finalize the project in its current state with the message "Final push to update README.md before project is placed into a ZIP.". 
+
+
+02-15-2024
+	DeletePartValidator.java
+		This file was removed, as no usages were found within project.
+
+	The above change was pushed with the message "DeletePartValidator.java was removed from project"
